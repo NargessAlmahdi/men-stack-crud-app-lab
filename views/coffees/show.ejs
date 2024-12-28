@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= coffee.name %></title>
+  </head>
+  <body>
+    <h1><%= coffee.name %></h1>
+    <% if (coffee.isReadyToEnjoy) { %>
+      <p>This coffee is ready to enjoy!</p>
+    <% } else { %>
+      <p>This coffee is not ready!</p>
+    <% } %>
+    <form action="/coffees/<%=coffee._id%>?_method=DELETE" method="POST">
+  <button type="submit">Delete <%= coffee.name %></button>
+</form>
+<a href="/coffees/<%= coffee._id %>/edit">Edit <%= coffee.name %></a>
+<a href="/coffees">Back to Coffees</a>
+  </body>
+</html>

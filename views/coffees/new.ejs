@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Coffee</title>
+  </head>
+  <body>
+    <h1>Create a New Coffee!</h1>
+    <form action="/Coffees" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+
+      <label for="isReadyToEnjoy">Ready to Enjoy?</label>
+      <input type="checkbox" name="isReadyToEnjoy" id="isReadyToEnjoy" />
+
+      <button type="submit">Add Coffee</button>
+    </form>
+    <a href="/Coffees/">Back to Coffees</a>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffees Index</title>
+  </head>
+  <body>
+    <h1>All Coffees</h1>
+    <a href="/coffees/new">Add New Coffee</a>
+    <ul>
+      <% Coffees.forEach((coffee) => { %>
+        <li>
+            <a href="/coffees/<%= coffee._id %>"> <%= coffee.name %> </a>
+          </li>
+        <% }); %>
+    </ul>
+
+  </body>
+  
+</html>

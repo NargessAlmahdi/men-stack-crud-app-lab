@@ -1,0 +1,20 @@
+<body>
+    <h1>Edit <%= coffee.name %></h1>
+    <form action="/Coffees/<%=coffee._id%>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= coffee.name %>" />
+
+      
+        <label for="isReadyToEnjoy">Ready to Enjoy?</label>
+
+        <input type="checkbox" name="isReadyToEnjoy" <% if (Coffee.isReadyToEnjoy) { %>checked<% } %> >
+
+
+
+      
+        <button type="submit">Update Coffee</button>
+      </form>
+    <a href="/coffees">Back to Coffees</a>
+
+
+  </body>
