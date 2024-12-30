@@ -60,7 +60,7 @@ app.delete("/coffees/:coffeeId", async (req, res) => {
 // GET /COFFEES
 app.get('/coffees', async (req, res) => {
   const allCoffees = await Coffee.find();
-  res.render('coffees/index.ejs', { coffees: allCoffees });
+  res.render('coffees/index.ejs', { Coffees: allCoffees });
 });
 
 
